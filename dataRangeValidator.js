@@ -1,7 +1,7 @@
 (function (angular) {
     'use strict';
     angular.module('date-range-validator', [])
-        .directive('validateAgainstDatepicker', function ($rootScope) {
+        .directive('validateAgainstDatepicker', ['$rootScope', function ($rootScope) {
 
             function checkDateRange(date1, date2) {
                 return date1 < date2;
@@ -36,5 +36,5 @@
                     });
                 }
             }
-        });
+        }]);
 })(angular);
